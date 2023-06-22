@@ -52,12 +52,13 @@ distance_data = []
 
 for i in xy_values.index:
     for j in xy_values.index:
-        loop_animal_i xy_values.loc[i, :]
-        loop_animal_i xy_values.loc[j, :]
+        if(i == j):
+            continue
+        loop_animal_i = xy_values.loc[i, :]
+        loop_animal_j = xy_values.loc[j, :]
     
-    if(i == j):
-        continue
 
-    distance = dist_2points(animal0, loop_animal)
-    print(distance)
-    distance_data.append(distance)
+        distance = dist_2points(loop_animal_i, loop_animal_j)
+        print(distance)
+        distance_data.append(distance)
+# %%
