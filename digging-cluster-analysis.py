@@ -38,6 +38,8 @@ def dist_2points(point1, point2):
 
     return(result)
 
+#
+
 #example use of function
 dist01 = dist_2points(xy1, xy2)
 
